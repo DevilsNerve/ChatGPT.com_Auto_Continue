@@ -1,0 +1,23 @@
+{
+    "manifest_version": 3,
+    "name": "DevilsNerve Auto Continue",
+    "version": "1.0",
+    "description": "Automatically clicks the 'Continue generating' button on ChatGPT.",
+    "permissions": [
+        "activeTab",
+        "scripting"
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_scripts": [
+        {
+            "matches": ["https://*.chatgpt.com/*"],
+            "js": ["content.js"]
+        }
+    ],
+    "icons": {
+        "48": "icons/icon48.png",
+        "128": "icons/icon128.png"
+    }
+}
